@@ -102,4 +102,12 @@ class CKPrompt {
         }
         database.add(operation)
     }
+    
+    class func fetchImageAsset(for reference: CKRecord.Reference, completion: @escaping(Result<CKAsset, Error>) -> ()) {
+        database.fetch(withRecordID: reference.recordID) { returnedRecord, returnedError in
+            let asset = returnedRecord?["image"] as! CKAsset
+            completion(.success(asset))
+        }
+        
+    }
 }
