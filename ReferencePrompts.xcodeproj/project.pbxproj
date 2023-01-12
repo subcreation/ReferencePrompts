@@ -15,6 +15,8 @@
 		B2F95ED9296CD59A00BFC85F /* ImagePromptsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F95ED8296CD59A00BFC85F /* ImagePromptsView.swift */; };
 		B2F95EDB296CEDA600BFC85F /* PromptData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F95EDA296CEDA600BFC85F /* PromptData.swift */; };
 		B2F95EDD296D00D300BFC85F /* ShuffleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F95EDC296D00D300BFC85F /* ShuffleViewModel.swift */; };
+		B2F95EE0296E037200BFC85F /* ReferencePrompts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2F95EDE296E037200BFC85F /* ReferencePrompts.xcdatamodeld */; };
+		B2F95EE2296E061E00BFC85F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F95EE1296E061E00BFC85F /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		B2F95ED8296CD59A00BFC85F /* ImagePromptsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePromptsView.swift; sourceTree = "<group>"; };
 		B2F95EDA296CEDA600BFC85F /* PromptData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptData.swift; sourceTree = "<group>"; };
 		B2F95EDC296D00D300BFC85F /* ShuffleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleViewModel.swift; sourceTree = "<group>"; };
+		B2F95EDF296E037200BFC85F /* ReferencePrompts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReferencePrompts.xcdatamodel; sourceTree = "<group>"; };
+		B2F95EE1296E061E00BFC85F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				B2F95EC7296CD43E00BFC85F /* ReferencePromptsApp.swift */,
+				B2F95EE1296E061E00BFC85F /* Persistence.swift */,
 				B2F95EDA296CEDA600BFC85F /* PromptData.swift */,
 				B2F95EC9296CD43E00BFC85F /* ContentView.swift */,
 				B2F95ED6296CD57C00BFC85F /* DashboardView.swift */,
@@ -68,6 +73,7 @@
 				B2F95EDC296D00D300BFC85F /* ShuffleViewModel.swift */,
 				B2F95ECB296CD44000BFC85F /* Assets.xcassets */,
 				B2F95ECD296CD44000BFC85F /* ReferencePrompts.entitlements */,
+				B2F95EDE296E037200BFC85F /* ReferencePrompts.xcdatamodeld */,
 				B2F95ECE296CD44000BFC85F /* Preview Content */,
 			);
 			path = ReferencePrompts;
@@ -152,11 +158,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2F95ED9296CD59A00BFC85F /* ImagePromptsView.swift in Sources */,
+				B2F95EE2296E061E00BFC85F /* Persistence.swift in Sources */,
 				B2F95EDB296CEDA600BFC85F /* PromptData.swift in Sources */,
 				B2F95EDD296D00D300BFC85F /* ShuffleViewModel.swift in Sources */,
 				B2F95ECA296CD43E00BFC85F /* ContentView.swift in Sources */,
 				B2F95ED7296CD57C00BFC85F /* DashboardView.swift in Sources */,
 				B2F95EC8296CD43E00BFC85F /* ReferencePromptsApp.swift in Sources */,
+				B2F95EE0296E037200BFC85F /* ReferencePrompts.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +378,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B2F95EDE296E037200BFC85F /* ReferencePrompts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B2F95EDF296E037200BFC85F /* ReferencePrompts.xcdatamodel */,
+			);
+			currentVersion = B2F95EDF296E037200BFC85F /* ReferencePrompts.xcdatamodel */;
+			path = ReferencePrompts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B2F95EBC296CD43E00BFC85F /* Project object */;
 }

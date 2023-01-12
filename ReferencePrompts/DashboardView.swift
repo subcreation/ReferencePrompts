@@ -12,9 +12,3 @@ struct DashboardView: View {
         Text("Dashboard")
     }
 }
-
-struct DashboardView_Previews: PreviewProvider {
-    static var previews: some View {
-        DashboardView()
-    }
-}
