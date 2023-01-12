@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B295A103297049EF00805FF8 /* ImageThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B295A102297049EF00805FF8 /* ImageThumbnailView.swift */; };
+		B295A1052970538500805FF8 /* CloseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B295A1042970538500805FF8 /* CloseButtonView.swift */; };
+		B295A107297053D400805FF8 /* ImagePromptDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B295A106297053D400805FF8 /* ImagePromptDetailView.swift */; };
+		B295A1092970559500805FF8 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B295A1082970559500805FF8 /* Color+Ext.swift */; };
 		B2F95EC8296CD43E00BFC85F /* ReferencePromptsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F95EC7296CD43E00BFC85F /* ReferencePromptsApp.swift */; };
 		B2F95ECA296CD43E00BFC85F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F95EC9296CD43E00BFC85F /* ContentView.swift */; };
 		B2F95ECC296CD44000BFC85F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F95ECB296CD44000BFC85F /* Assets.xcassets */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B295A102297049EF00805FF8 /* ImageThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageThumbnailView.swift; sourceTree = "<group>"; };
+		B295A1042970538500805FF8 /* CloseButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButtonView.swift; sourceTree = "<group>"; };
+		B295A106297053D400805FF8 /* ImagePromptDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePromptDetailView.swift; sourceTree = "<group>"; };
+		B295A1082970559500805FF8 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		B2F95EC4296CD43E00BFC85F /* ReferencePrompts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReferencePrompts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F95EC7296CD43E00BFC85F /* ReferencePromptsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencePromptsApp.swift; sourceTree = "<group>"; };
 		B2F95EC9296CD43E00BFC85F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,7 +78,11 @@
 				B2F95EC9296CD43E00BFC85F /* ContentView.swift */,
 				B2F95ED6296CD57C00BFC85F /* DashboardView.swift */,
 				B2F95ED8296CD59A00BFC85F /* ImagePromptsView.swift */,
+				B295A102297049EF00805FF8 /* ImageThumbnailView.swift */,
+				B295A106297053D400805FF8 /* ImagePromptDetailView.swift */,
+				B295A1042970538500805FF8 /* CloseButtonView.swift */,
 				B2F95EDC296D00D300BFC85F /* ShuffleViewModel.swift */,
+				B295A1082970559500805FF8 /* Color+Ext.swift */,
 				B2F95ECB296CD44000BFC85F /* Assets.xcassets */,
 				B2F95ECD296CD44000BFC85F /* ReferencePrompts.entitlements */,
 				B2F95EDE296E037200BFC85F /* ReferencePrompts.xcdatamodeld */,
@@ -158,13 +170,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2F95ED9296CD59A00BFC85F /* ImagePromptsView.swift in Sources */,
+				B295A1052970538500805FF8 /* CloseButtonView.swift in Sources */,
 				B2F95EE2296E061E00BFC85F /* Persistence.swift in Sources */,
+				B295A103297049EF00805FF8 /* ImageThumbnailView.swift in Sources */,
 				B2F95EDB296CEDA600BFC85F /* PromptData.swift in Sources */,
+				B295A1092970559500805FF8 /* Color+Ext.swift in Sources */,
 				B2F95EDD296D00D300BFC85F /* ShuffleViewModel.swift in Sources */,
 				B2F95ECA296CD43E00BFC85F /* ContentView.swift in Sources */,
 				B2F95ED7296CD57C00BFC85F /* DashboardView.swift in Sources */,
 				B2F95EC8296CD43E00BFC85F /* ReferencePromptsApp.swift in Sources */,
 				B2F95EE0296E037200BFC85F /* ReferencePrompts.xcdatamodeld in Sources */,
+				B295A107297053D400805FF8 /* ImagePromptDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
