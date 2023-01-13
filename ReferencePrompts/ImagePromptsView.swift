@@ -23,7 +23,7 @@ struct ImagePromptsView: View {
                 ScrollView {
                     HStack(alignment: .top, spacing: mosaicSpacing) {
                         ForEach((0..<Int(floor(geo.size.width / columnWidth))).reversed(), id: \.self) { c in
-                            VStack(spacing: mosaicSpacing) {
+                            LazyVStack(spacing: mosaicSpacing) {
                                 ForEach(getPromptsInColumns(by: Int(floor(geo.size.width / columnWidth)))[c]) { prompt in
                                     ImageThumbnailView(prompt: prompt)
                                         .onTapGesture {

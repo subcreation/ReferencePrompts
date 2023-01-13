@@ -105,8 +105,11 @@ class CKPrompt {
     
     class func fetchImageAsset(for reference: CKRecord.Reference, completion: @escaping(Result<CKAsset, Error>) -> ()) {
         database.fetch(withRecordID: reference.recordID) { returnedRecord, returnedError in
-            let asset = returnedRecord?["image"] as! CKAsset
-            completion(.success(asset))
+            if let asset = returnedRecord?["image"] as? CKAsset {
+                completion(.success(asset))
+            } else {
+                print("No image found for record: \(String(describing: returnedRecord?.recordID))")
+            }
         }
         
     }
