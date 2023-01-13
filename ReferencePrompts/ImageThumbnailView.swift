@@ -12,6 +12,7 @@ struct ImageThumbnailView: View {
     @State private var imageAsset:CKAsset?
     
     @State var prompt:VisualPrompt
+    @State var isLoaded = false
     
     private let columnWidth: CGFloat = 150.0
     private let cornerRadius: CGFloat = 10.0
@@ -37,27 +38,36 @@ struct ImageThumbnailView: View {
                                 .foregroundColor(.red)
                         }
                     } else {
-                        ZStack {
-                            Color.black
-                                .frame(height: columnWidth)
-                                .cornerRadius(cornerRadius)
-                            ProgressView()
+                        placeholder
+                    }
+                }
+            } else {
+                placeholder
+            }
+        }
+        .onAppear {
+            if !isLoaded {
+                if let thumbnailReference = prompt.thumbnailImage {
+                    CKPrompt.fetchImageAsset(for: thumbnailReference) { (result) in
+                        switch result {
+                        case .success(let asset):
+                            imageAsset = asset
+                            isLoaded = true
+                        case .failure(let error):
+                            print("Failed to load thumbnail: \(error)")
                         }
                     }
                 }
             }
         }
-        .onAppear {
-            if let thumbnailReference = prompt.thumbnailImage {
-                CKPrompt.fetchImageAsset(for: thumbnailReference) { (result) in
-                    switch result {
-                    case .success(let asset):
-                        imageAsset = asset
-                    case .failure(let error):
-                        print("Failed to load thumbnail: \(error)")
-                    }
-                }
-            }
+    }
+    
+    var placeholder: some View {
+        ZStack {
+            Color.black
+                .frame(height: columnWidth)
+                .cornerRadius(cornerRadius)
+            ProgressView()
         }
     }
 }

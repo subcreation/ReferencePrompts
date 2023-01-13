@@ -23,7 +23,7 @@ struct ImagePromptsView: View {
                 ScrollView {
                     HStack(alignment: .top, spacing: mosaicSpacing) {
                         ForEach((0..<Int(floor(geo.size.width / columnWidth))).reversed(), id: \.self) { c in
-                            LazyVStack(spacing: mosaicSpacing) {
+                            VStack(spacing: mosaicSpacing) {
                                 ForEach(getPromptsInColumns(by: Int(floor(geo.size.width / columnWidth)))[c]) { prompt in
                                     ImageThumbnailView(prompt: prompt)
                                         .onTapGesture {
@@ -69,7 +69,7 @@ struct ImagePromptsView: View {
                 
                 if let index = index {
                     if (index+1) % column == i {
-                        list.append(prompt)
+                        list.insert(prompt, at: 0)
                     }
                 }
             }
